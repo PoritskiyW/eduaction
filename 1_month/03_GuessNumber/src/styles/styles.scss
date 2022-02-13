@@ -1,0 +1,121 @@
+@mixin buttons-inputs {
+
+  height: 40px;
+  background-color: #4E4A59;
+  border-radius: 10px;
+}
+
+@mixin fonts {
+
+  color: black;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+html {
+
+  height: 100%;
+}
+
+body {
+
+  overflow: hidden;
+  background: linear-gradient(#394053, #4E4A59);
+}
+
+.container {
+
+  text-align: center;
+
+  height: 700px;
+  width: 900px;
+  background-color: #6E6362;
+  border-radius: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -350px 0 0 -450px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+
+  .main-part {
+
+    &__info-text {
+
+      height: 60px;
+      font-size: 20px;
+    }
+
+    .guess-box {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+  }
+
+  .settings {
+
+    @include fonts;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input-block {
+
+      margin-bottom: 30px;
+
+      .input {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .property-container {
+
+          &__property-name {
+
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#easter-egg {
+
+  font-size: 10px;
+}
+
+#dynamic-text {
+
+  font-weight: bold;
+}
+
+h1 {
+
+  font-size: 60px;
+  margin: 0;
+}
+
+button {
+
+  @include buttons-inputs;
+  @include fonts;
+  width: 120px;
+}
+
+input {
+
+  @include fonts;
+  @include buttons-inputs;
+  width: 200px;
+  margin: 20px;
+}

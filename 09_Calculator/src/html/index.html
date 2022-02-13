@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/1aac3edc50.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.1/math.min.js" integrity="sha512-o7l/Uxf+iFLa5H6VpPjFdrY+bF+JtYI47FXfYJp6zlCRhs8K8sO1EVyEiS/1FeEvw1b6HeK6oXT3Plza8L/NIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Calculator app</title>
+</head>
+<body>
+    <section class="calculator">
+        <header class="calculator__display display">
+            <input class="display__result" id="result" type="text" value="0.00" readonly>
+            <input class="display__input" id="input" value="0.00">
+        </header>
+        <main class="calculator__keyboard keyboard">
+            <section class="keyboard__extended extended">
+                <button class="extended__button" id="button-2nd">2<sup>nd</sup></button>
+                <button class="extended__button" id="button-pi">&#960</button>
+                <button class="extended__button" id="button-e">e</button>
+                <button class="extended__button" id="button-square">x<sup>2</sup></button>
+                <button class="extended__button" id="button-cube">x<sup>3</sup></button>
+                <button class="extended__button" id="button-factorial">n!</button>
+                <button class="extended__button" id="button-x-pow-y">x<sup>y</sup></button>
+                <button class="extended__button" id="button-10-pow-x">10<sup>x</sup></button>
+                <button class="extended__button" id="button-1-sub-x"><sup>1</sup>/<sub>x</sub></button>
+                <button class="extended__button" id="button-log">lg</button>
+                <button class="extended__button" id="button-ln">ln</button>
+                <button class="extended__button" id="button-module">|x|</button>
+                <button class="extended__button" id="button-exp">exp</button>
+                <button class="extended__button" id="button-remainder">mod</button>
+                <button class="extended__button" id="button-sqrt">&#8730</button>
+            </section>
+            <section class="keyboard__main main">
+                <button class="main__button" id="button-dot">.</button>
+                <button class="main__button" id="button-clean">C</button>
+                <button class="main__button" id="button-backspace"><i class="fas fa-backspace"></i></button>
+                <button class="main__button" id="button-subtract">/</button>
+                <button class="main__button number" id="button-7">7</button>
+                <button class="main__button number" id="button-8">8</button>
+                <button class="main__button number" id="button-9">9</button>
+                <button class="main__button" id="button-multiply">*</button>
+                <button class="main__button number" id="button-4">4</button>
+                <button class="main__button number" id="button-5">5</button>
+                <button class="main__button number" id="button-6">6</button>
+                <button class="main__button" id="button-minus">-</button>
+                <button class="main__button number" id="button-1">1</button>
+                <button class="main__button number" id="button-2">2</button>
+                <button class="main__button number" id="button-3">3</button>
+                <button class="main__button" id="button-plus">+</button>
+                <button class="main__button number" id="button-left-brace">(</button>
+                <button class="main__button number" id="button-0">0</button>
+                <button class="main__button number" id="button-right-brace">)</button>
+                <button class="main__button" id="button-equal">=</button>
+            </section>
+        </main>
+    </section>
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>

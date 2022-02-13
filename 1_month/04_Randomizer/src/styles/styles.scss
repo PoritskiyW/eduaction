@@ -1,0 +1,84 @@
+@mixin buttons-inputs {
+
+  height: 40px;
+  background-color: #4E4A59;
+  border-radius: 10px;
+}
+
+@mixin fonts {
+
+  color: black;
+  font-family: monospace;
+}
+
+html {
+
+  height: 100%;
+}
+
+body {
+
+  overflow: hidden;
+  background: linear-gradient(#394053, #4E4A59);
+}
+
+.main {
+
+  text-align: center;
+
+  height: 700px;
+  width: 900px;
+  background-color: #6E6362;
+  border-radius: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -350px 0 0 -450px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+
+    @include fonts;
+    font-size: 60px;
+    margin: 0;
+  }
+
+  &__p {
+
+    @include fonts;
+    font-size: 20px;
+  }
+}
+
+#dynamic-text {
+
+  font-weight: bold;
+}
+
+input {
+
+  @include fonts;
+  @include buttons-inputs;
+  font-size: 20px;
+  width: 200px;
+}
+
+button {
+
+  @include buttons-inputs;
+  @include fonts;
+  font-size: 20px;
+  width: 120px;
+  margin: 20px;
+
+  &:disabled {
+
+    background-color: red;
+    color: white;
+  }
+}
