@@ -1,4 +1,5 @@
 import { cleanResult, setResultUrls } from './utils';
+import './styles/styles.scss';
 
 function addListener(id: string, event: string, callback) {
   const node = document.getElementById(id);

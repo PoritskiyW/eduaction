@@ -190,3 +190,4 @@ dist
 .pnp.*
 
 .idea/
+packages/web/public

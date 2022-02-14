@@ -10,6 +10,9 @@ const { allowedFormats, maxSize } = envConfig;
 const imageFormats = ['raw', 'jpg', 'tiff', 'psd', 'bmp', 'png', 'jp2'];
 
 app.setStatic(path.resolve(__dirname, '../../web/dist/'));
+app.setRoute('/', Methods.GET, (req, res) => {
+  res.sendfile(path.resolve(path.resolve(), 'static', 'index.html'));
+})
 app.setRoute('/*', Methods.POST, (req, res) => {
   const file = upload.single('file');
   file(req, res, (err) => {
@@ -19,7 +22,7 @@ app.setRoute('/*', Methods.POST, (req, res) => {
     if (req.file) {
       const extension: string = req.file.originalname.split('.')[1].trim();
       if (!allowedFormats.includes(extension) || req.file.size > maxSize) {
-        res.status(200).end();
+        res.status(409).end();
       }
       if (imageFormats.includes(extension)) {
         const image = new File(req.file);
